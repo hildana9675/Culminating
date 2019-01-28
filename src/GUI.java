@@ -46,6 +46,7 @@ public class GUI extends javax.swing.JFrame {
         buttonStart = new javax.swing.JButton();
         buttonHow = new javax.swing.JButton();
         buttonInfo = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -84,6 +85,9 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Funny2.gif"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -95,24 +99,31 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(buttonStart, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(buttonHow, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonInfo)))
+                            .addComponent(buttonInfo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(TitleLabel)))
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(buttonStart)
-                .addGap(46, 46, 46)
-                .addComponent(buttonHow)
-                .addGap(39, 39, 39)
-                .addComponent(buttonInfo)
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(buttonStart)
+                        .addGap(46, 46, 46)
+                        .addComponent(buttonHow)
+                        .addGap(39, 39, 39)
+                        .addComponent(buttonInfo))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         jMenu1.setText("File");
@@ -184,6 +195,29 @@ public class GUI extends javax.swing.JFrame {
             }
         });
     }
+//}
+// PUT YOUR METHODS HERE
+    
+    
+//    public static void Readfile() throws IOException {
+//        ArrayList<String> quotes = new ArrayList<String>();
+//        BufferedReader readFile = new BufferedReader(new FileReader("Question.txt"));
+//        String line = "";
+//    }
+//    
+//    public static void ButtonArray(){
+//        JButton[][] buttons = new JButton[6][6];
+//        
+//        for(int i = 0; i < buttons.length; i++){
+//            for(int j=0; j<buttons[i].length; j++){
+//                buttons[i][j] = new JButton("Button [" + i + "][" + j + "]");
+//            }
+//        }
+//    }
+//    
+//    public static boolean Answer(boolean Aw){
+//       return Aw; 
+//    }
     
     
     
@@ -192,6 +226,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton buttonHow;
     private javax.swing.JButton buttonInfo;
     private javax.swing.JButton buttonStart;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
