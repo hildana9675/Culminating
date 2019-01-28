@@ -98,7 +98,7 @@ private static int total=0  ;
         board.setSize(WINDOW_WIDTH - 20, WINDOW_HEIGHT);
         frame.add(board);
         frame.setVisible(true);
-                String f1="src//QuestionAnswer.txt";
+                String f1="QuestionAnswer.txt";
 
             try{
                 BufferedReader reader = new BufferedReader(new FileReader(f1));
