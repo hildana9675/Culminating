@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 import java.awt.Color;
 import java.awt.Font;
@@ -14,6 +19,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
+/**
+ *
+ * @author Gloria Song
+ */
 public class UnitsBoard1  extends javax.swing.JFrame {
 private static int score1=0;
 private static int score2=0;
@@ -62,6 +71,7 @@ private static int total=0;
                 
             }
         }
+        
         JButton[] BLK1 = new JButton[4];
         BLK1[0] = new JButton("Go Back");
         BLK1[1] = new JButton("Correct:"+ score1);
@@ -70,14 +80,14 @@ private static int total=0;
         JTextField text1=new JTextField("Wrong:");
         JTextField text2=new JTextField("Total:");
         text.setFont(new Font("DejaVu Serif", Font.BOLD, 20));       
-        text.setForeground(Color.green);
-        text.setBackground(Color.blue);
+        text.setForeground(Color.GREEN);
+        text.setBackground(Color.WHITE);
         text1.setFont(new Font("DejaVu Serif", Font.BOLD, 20));       
         text1.setForeground(Color.red);
-        text1.setBackground(Color.blue);
+        text1.setBackground(Color.WHITE);
         text2.setFont(new Font("DejaVu Serif", Font.BOLD, 20));       
-        text2.setForeground(Color.yellow);
-        text2.setBackground(Color.blue);
+        text2.setForeground(Color.BLUE);
+        text2.setBackground(Color.WHITE);
         JLabel Res1    = new JLabel("Correct:"+ score1+score2+score3);
 
         JBox board =
@@ -90,8 +100,8 @@ private static int total=0;
                         JBox.hbox(BLK[3][0], BLK[3][1], BLK[3][2], BLK[3][3],BLK[3][4], BLK[3][5]),
                         JBox.hbox(BLK[4][0], BLK[4][1], BLK[4][2], BLK[4][3],BLK[4][4], BLK[4][5]),
                         JBox.hbox(BLK[5][0], BLK[5][1], BLK[5][2], BLK[5][3],BLK[5][4], BLK[5][5]),
-                        JBox.hbox(text,text1,text2)
-                );
+                        JBox.hbox(text,text1,text2));
+        
         board.setSize(WINDOW_WIDTH - 20, WINDOW_HEIGHT);
         frame.add(board);
         frame.setVisible(true);
@@ -104,94 +114,89 @@ private static int total=0;
                 String s; 
                 //S is total file
                 String S;
-        S="";
-        while ((s = reader.readLine()) != null) {
-            S=S+s;
-        }
-        reader.close();
-
-        for ( int i = 0; i < height; i++) {
-            //Choose Unites
-            l = S.indexOf(Chapter[i]);
-            if(i<5)
-            {
-                m = S.indexOf(Chapter[i+1]);
-                Section=S.substring(l,m);
+                S="";
+                while ((s = reader.readLine()) != null) {
+                    S=S+s;
             }
-            else
-            {
-                Section=S.substring(l,S.length());
-            }
-            //Choose questions and answers
-            for (int  j = 0; j < width; j++) {
-                l=Section.indexOf(String.valueOf(j+1)+". ");
-                m=Section.indexOf("a. ",1);
-                Qestio=Section.substring(l+3, m);
-                Question[i][j]=Qestio;
-                Section=Section.substring(m,Section.length());
+                reader.close();
                 
-                n=Section.indexOf("()",1);
-                Answe=Section.substring(2,n);
-                Answer[i][j]=Answe;
-            }
-        }
-
-        BLK1[0].addActionListener(new ActionListener() {
-            @Override
-            
-            public void actionPerformed(ActionEvent e) {               
-            new    ModeOption().setVisible(true);
-                   frame.dispose();
-//                   frame.hide();
-                   frame.setVisible(false);                
-            }});
-        
-        
-        for ( int i = 0; i < height; i++) {
-            for (int  j = 0; j < width; j++) {
-
-                String cd;//Question
-                String ab; //RightAnswer
-                if (yes == "yes"){
-                cd=Question[j][i];
-                ab=Answer[j][i];  
+                for ( int i = 0; i < height; i++) {
+                    //Choose Unites
+                    l = S.indexOf(Chapter[i]);
+                    if(i<5){
+                        m = S.indexOf(Chapter[i+1]);
+                        Section=S.substring(l,m);
+                    }
+                    else {
+                        Section=S.substring(l,S.length());
+                    }
+                    //Choose questions and answers
+                    for (int  j = 0; j < width; j++) {
+                        l=Section.indexOf(String.valueOf(j+1)+". ");
+                        m=Section.indexOf("a. ",1);
+                        Qestio=Section.substring(l+3, m);
+                        Question[i][j]=Qestio;
+                        Section=Section.substring(m,Section.length());
+                
+                        n=Section.indexOf("()",1);
+                        Answe=Section.substring(2,n);
+                        Answer[i][j]=Answe;
+                    }
                 }
-                else{
-                Random rand = new Random();
-                int i1 = rand.nextInt(6);
-                int j1 = rand.nextInt(6);
-                 cd=Question[i1][j1];
-                 ab=Answer[i1][j1]; 
-                }
-
-                 
-                BLK[i][j].addActionListener(new ActionListener() {
+                
+                BLK1[0].addActionListener(new ActionListener() {
                     @Override
-
-                    public void actionPerformed(ActionEvent e) {
-                        String your_answer = JOptionPane.showInputDialog(cd);
-                        JOptionPane.showMessageDialog(null, "Reference and yours: "+ ab +" Vs " + your_answer);
-                        JButton source = (JButton) e.getSource();
-                        source.setEnabled(false);
-                        System.out.println(ab.length());
-                        System.out.println(your_answer.length());
-                         score1++;
-                        
-                        if (your_answer.equalsIgnoreCase(ab.trim())) {
-                        source.setBackground(Color.GREEN);
-                         score2++;
-                        System.out.println(score1);
-                        text.setText("Total:"+score2);
+            
+                public void actionPerformed(ActionEvent e) {       
+                    new ModeOption().setVisible(true);
+                    frame.dispose();
+                    frame.setVisible(false);                
+              }});
+                
+                for ( int i = 0; i < height; i++) {
+                    for (int  j = 0; j < width; j++) {
+                        //Question
+                        String Que;
+                        //RightAnswer
+                        String Right_Answer; 
+                        if (yes == "yes"){
+                            Que = Question[j][i];
+                            Right_Answer = Answer[j][i];  
                         }
-                        else {
-                            source.setBackground(Color.red);
-                         score3++;
-                         text1.setText("Wrong:"+score3);
-                        System.out.println(score2);;    
+                        else{
+                            Random rand = new Random();
+                            int i1 = rand.nextInt(6);
+                            int j1 = rand.nextInt(6);
+                            Que = Question[i1][j1];
+                            Right_Answer = Answer[i1][j1]; 
                         }
-                        total=score2+score3;
                         
-                        text2.setText("Total:"+total);
+                        BLK[i][j].addActionListener(new ActionListener() {
+                            @Override
+                            
+                            public void actionPerformed(ActionEvent e) {
+                                String your_answer = JOptionPane.showInputDialog(Que);
+                                JOptionPane.showMessageDialog(null, "Reference and yours: "+ Right_Answer +" Vs " + your_answer);
+                                JButton source = (JButton) e.getSource();
+                                source.setEnabled(false);
+                                System.out.println(Right_Answer.length());
+                                System.out.println(your_answer.length());
+                                score1++;
+                        
+                                if (your_answer.equalsIgnoreCase(Right_Answer.trim())) {
+                                    source.setBackground(Color.GREEN);
+                                    score2++;
+                                    System.out.println(score1);
+                                    text.setText("Total:"+score2);
+                                }
+                                else {
+                                    source.setBackground(Color.red);
+                                    score3++;
+                                    text1.setText("Wrong:"+score3);
+                                    System.out.println(score2);;    
+                                }
+                                total=score2+score3;
+                                text2.setText("Total:"+total);
                     }
                 });
             }
