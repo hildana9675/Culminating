@@ -47,7 +47,7 @@ public class Instruction extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(311, Short.MAX_VALUE)
+                .addContainerGap(508, Short.MAX_VALUE)
                 .addComponent(buttonBack)
                 .addGap(34, 34, 34))
         );
@@ -56,7 +56,7 @@ public class Instruction extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(buttonBack)
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addContainerGap(349, Short.MAX_VALUE))
         );
 
         jMenu1.setText("File");

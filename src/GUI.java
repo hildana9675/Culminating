@@ -4,18 +4,6 @@
  * and open the template in the editor.
  */
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.WindowConstants;
-import javax.swing.JOptionPane;
-import java.io.*;
-import java.util.*;
-
 /**
  *
  * @author glSon8840
@@ -184,9 +172,7 @@ public class GUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-//    public class Board {
-//    public static final int WINDOW_WIDTH = 1000;
-//    public static final int WINDOW_HEIGHT = 800;
+
     public static void main(String args[]){ 
     
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -195,30 +181,6 @@ public class GUI extends javax.swing.JFrame {
             }
         });
     }
-//}
-// PUT YOUR METHODS HERE
-    
-    
-//    public static void Readfile() throws IOException {
-//        ArrayList<String> quotes = new ArrayList<String>();
-//        BufferedReader readFile = new BufferedReader(new FileReader("Question.txt"));
-//        String line = "";
-//    }
-//    
-//    public static void ButtonArray(){
-//        JButton[][] buttons = new JButton[6][6];
-//        
-//        for(int i = 0; i < buttons.length; i++){
-//            for(int j=0; j<buttons[i].length; j++){
-//                buttons[i][j] = new JButton("Button [" + i + "][" + j + "]");
-//            }
-//        }
-//    }
-//    
-//    public static boolean Answer(boolean Aw){
-//       return Aw; 
-//    }
-    
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -9,7 +9,7 @@ import java.awt.*;
 
 /**
  *
- * @author glSon8840
+ * 
  */
 public class JBox extends JPanel {
     

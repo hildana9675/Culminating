@@ -3,8 +3,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.BorderFactory;
@@ -18,16 +17,14 @@ import javax.swing.WindowConstants;
 public class UnitsBoard1  extends javax.swing.JFrame {
 private static int score1=0;
 private static int score2=0;
-private static int score3=0  ; 
-private static int total=0  ; 
+private static int score3=0; 
+private static int total=0; 
 
     public static void main(String yes) throws Exception {
         
         
-//        String yes = "yes";
         int WINDOW_WIDTH = 1000;
-        int WINDOW_HEIGHT = 800;
-        System.out.println("Working Directory = " +  System.getProperty("user.dir"));
+        int WINDOW_HEIGHT = 1000;
         String[] Chapter = {"Cells","Genetics","Circulation & Digestion & Respiration","Plants","Diversity of living things", "Evolution" };
         String show;
         if (yes == "yes"){
@@ -58,14 +55,14 @@ private static int total=0  ;
                 BLK[i][j] = new JButton(new Integer(i*6+j+1).toString());
                 JBox.setSize(BLK[i][j], WINDOW_WIDTH / width - 0,
                         WINDOW_HEIGHT / height - 36);
-                BLK[i][j].setBackground(Color.BLUE);
-                BLK[i][j].setForeground(Color.YELLOW);
+                BLK[i][j].setBackground(Color.WHITE);
+                BLK[i][j].setForeground(Color.BLACK);
                 BLK[i][j].setBorder(BorderFactory.createRaisedBevelBorder());
                 BLK[i][j].setFont(new Font("DejaVu Serif", Font.BOLD, 25));
                 
             }
         }
-        JButton[] BLK1 = new JButton[4];//("Go Back");
+        JButton[] BLK1 = new JButton[4];
         BLK1[0] = new JButton("Go Back");
         BLK1[1] = new JButton("Correct:"+ score1);
         BLK1[2] = new JButton("Wrong:"+ score2);
@@ -103,8 +100,10 @@ private static int total=0  ;
             try{
                 BufferedReader reader = new BufferedReader(new FileReader(f1));
                 ArrayList<String> lines = new ArrayList<String>();
-        String s;
-        String S;
+                //s is every single line of the file
+                String s; 
+                //S is total file
+                String S;
         S="";
         while ((s = reader.readLine()) != null) {
             S=S+s;
@@ -112,16 +111,18 @@ private static int total=0  ;
         reader.close();
 
         for ( int i = 0; i < height; i++) {
-            l=S.indexOf(Chapter[i]);
+            //Choose Unites
+            l = S.indexOf(Chapter[i]);
             if(i<5)
             {
-                m=S.indexOf(Chapter[i+1]);
+                m = S.indexOf(Chapter[i+1]);
                 Section=S.substring(l,m);
             }
             else
             {
                 Section=S.substring(l,S.length());
             }
+            //Choose questions and answers
             for (int  j = 0; j < width; j++) {
                 l=Section.indexOf(String.valueOf(j+1)+". ");
                 m=Section.indexOf("a. ",1);
@@ -149,8 +150,8 @@ private static int total=0  ;
         for ( int i = 0; i < height; i++) {
             for (int  j = 0; j < width; j++) {
 
-                String cd;
-                String ab; 
+                String cd;//Question
+                String ab; //RightAnswer
                 if (yes == "yes"){
                 cd=Question[j][i];
                 ab=Answer[j][i];  
@@ -176,7 +177,7 @@ private static int total=0  ;
                         System.out.println(your_answer.length());
                          score1++;
                         
-                        if (your_answer.equals(ab.trim())) {
+                        if (your_answer.equalsIgnoreCase(ab.trim())) {
                         source.setBackground(Color.GREEN);
                          score2++;
                         System.out.println(score1);
@@ -196,7 +197,7 @@ private static int total=0  ;
             }
         }
          } catch(Exception e){
-//        return false;            // Always must return something
+
     }
 
            
