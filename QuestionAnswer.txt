@@ -5,8 +5,8 @@ a. Diaphragm ()
 a. Cholesterol ()
 3. Active transport does not require ATP. True or False? 
 a. False ()
-4. Name one type of macromolecule. 
-a. Carbohydrates or Protein or Lipids ()
+4. What makes ribosomes?
+a. nucleus ()
 5. What type of respiration does not require oxygen? 
 a. Anaerobic respiration ()
 6. What tissue in a plant cell functions as the food production? 
@@ -23,7 +23,7 @@ A. Heterozygous
 B. Homozygous 
 C. Dominant 
 D. Recessive 
-a. Homozygous (B is the answer) ()
+a. B ()
 4. When neither allele controlling a trait is dominant, it is called ____________. 
 a. Blending ()
 5. In humans, the allele for hemophilia (h) is sex-linked and recessive to the normal gene for 
@@ -32,7 +32,7 @@ A. 100%
 B. 75% 
 C. 50% 
 D. 25% 
-a. 100% (a is the answer) ()
+a. A ()
 6. A nondisjunction disorder is when the paired chromosomes fail to separate during cell 
 division. True or False? 
 a. True ()
@@ -99,7 +99,7 @@ A. Divergent pathways
 B. Convergent Evolution 
 C. Homoplasies 
 D. Coevolution 
-a. Divergent pathways ()
+a. A ()
 5. ____________________ are proteins mixed in water in which liquid filled spheres are formed 
 spontaneously. 
 a. Liposomes ()
