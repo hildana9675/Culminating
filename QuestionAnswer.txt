@@ -1,4 +1,4 @@
-﻿Cells 
+Cells 
 1. What focuses the light of the slide of the microscope? 
 a. Diaphragm ()
 2. What keeps the fluidity of the cell membrane? 
@@ -40,18 +40,18 @@ Circulation & Digestion & Respiration
 1. The entry point of the stomach is guarded by a special muscular structure called 
 the___________. 
 a. Cardiac Sphincter ()
-2. What fat soluble vitamin functions to blood clot? 
-a. Vitamin K or K ()
-3. How many chambers make up the human heart? 
-a. Four or 4 ()
+2. What fat soluble vitamin functions to blood clot (Enter letter)? 
+a. K ()
+3. How many chambers make up the human heart (Enter a number)? 
+a. 4 ()
 4. What us the name of the sac that surrounds the heart? 
 a. Pericardium ()
 5. When you inhale, the diaphragm contracts and pulls down. The volume increases and 
 pressure decreases. True or False? 
 a. True ()
 6. What is the name of the measurement that can measure the maximal amount of air you 
-can exchange? 
-a. Vital capacity or VC ()
+can exchange(Give full name) ?
+a. Vital capacity ()
 Plants 
 1. ______________ is the resumption of growth of an embryo within a seed. 
 a. Germination Endodermis ()
@@ -77,22 +77,22 @@ evolutionary origin.
 a. Homologous structure ()
 3. Gram-positive bacteria are stained pink by safranin due to its thinner cell wall. True or 
 false? 
-a. False (its purple stained by crystal violet) ()
-4. Name one of the 3 phyla for the slime and water moulds. 
-a. Oomycota or Myxomycotes or Acrasiomycotes ()
+a. False ()
+4. Name all 3 phyla for the slime and water moulds(Use "and" to connect each name).
+a. Oomycota and Myxomycotes and Acrasiomycotes ()
 5. _________________ is a network or fine filaments found in fungi 
 a. Hyphae ()
 6. Which kingdom is multicellular eukaryotes but heterotroph, reproduce sexually, and have 
-no cell wall? 
-a. KIngdom Animalia or Animalia ()
+no cell wall(Give full name)?
+a. KIngdom Animalia ()
 Evolution 
 1. ______________________ is when similar organisms are capable of interbreeding and 
 producing fertile offspring. 
 a. Species ()
-2. Who is the scientist that introduced the concept called Natural Selection? 
-a. Darwin or Charles Darwin ()
-3. Name one of the three types of selection. 
-a. Stabilizing or Directional or Disruptive ()
+2. Who is the scientist that introduced the concept called Natural Selection(Give full name)?
+a. Charles Darwin ()
+3. Name three types of selection(Use "and" to connect each name). 
+a. Stabilizing and Directional and Disruptive ()
 4. What is the name of the pathway of evolution in which two or more species evolve 
 increasingly different, due to different selection pressures. 
 A. Divergent pathways 
