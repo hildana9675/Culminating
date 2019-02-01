@@ -37,6 +37,8 @@ public class Instruction extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        buttonBack.setFont(new java.awt.Font("Stylus BT", 1, 16)); // NOI18N
+        buttonBack.setForeground(new java.awt.Color(0, 102, 255));
         buttonBack.setText("Back");
         buttonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,28 +50,31 @@ public class Instruction extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Palatino Linotype", 0, 24)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("How To Play \n\nThe game is set up in a grid. Each Box represents one question. \nThe point of the game is to answer as many questions correctly.\nFor every correct answer, a mark is given to you.\n\nThere are Two Modes to this Game: Unit and Random. \n  Unit: Each row represents one unit in the Grade 11 Biology course\n  Random: The questions are set to random \n\nHave Fun! \n");
+        jTextArea1.setText("How To Play \n\nThe game is set up in a grid. Each Box represents one question. \nThe point of the game is to answer as many questions correctly.\nFor every correct answer, a mark is given to you.\n\nThere are Two Modes to this Game: Unit and Random. \n  Unit: Each column represents one unit in the Grade 11 Biology course\n  Random: The questions are set to random \n\nHave Fun! \n");
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(buttonBack))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(buttonBack)
+                        .addGap(20, 20, 20)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(buttonBack)
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
-                .addGap(55, 55, 55))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         jMenu1.setText("File");

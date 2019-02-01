@@ -32,8 +32,8 @@ private static int total=0;
     public static void main(String yes) throws Exception {
         
         //determine the size of game board  
-        int WINDOW_WIDTH = 1000;
-        int WINDOW_HEIGHT = 1000;
+        int WINDOW_WIDTH = 700;
+        int WINDOW_HEIGHT = 700;
         //Array with each units 
         String[] Chapter = {"Cells","Genetics","Circulation & Digestion & Respiration","Plants","Diversity of living things", "Evolution" };
         String show;
@@ -158,8 +158,11 @@ private static int total=0;
                 
                 //back button
                 BLK1[0].addActionListener(new ActionListener() {
-//                    
-            
+                    
+                /**
+                  *
+                  * @author Gloria Song
+                */    
                 public void actionPerformed(ActionEvent e) {  
                     //if press back, go back to mode option frame. Makes it visible
                     new ModeOption().setVisible(true);
